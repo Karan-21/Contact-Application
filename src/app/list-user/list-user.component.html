@@ -1,0 +1,60 @@
+<h1 class="aa">Contact Application</h1>
+<br>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.27.0/feather.min.js" integrity="sha256-xHkYry2yRjy99N8axsS5UL/xLHghksrFOGKm9HvFZIs=" crossorigin="anonymous"></script>
+<div class="container">
+<div class="row">
+    <!-- Start col -->
+    <div *ngFor="let item of collection" class="col-lg-6">
+        <div class="card m-b-30">
+            <div class="card-body py-5">
+                <div class="row">
+                    <div class="col-lg-3 text-center">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar1.png" class="img-fluid mb-3" alt="user" />
+                    </div>
+                    <div class="col-lg-9">
+                        <h4>{{item.name}}</h4>
+                        <p>{{item.email}}</p>
+                        <div class="button-list mt-4 mb-3">
+                            <button type="button" class="btn btn-primary-rgba"><i class="feather icon-message-square mr-2"></i>Message</button>
+                            <button type="button" class="btn btn-success-rgba"><i class="feather icon-phone mr-2"></i>Call Now</button>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-borderless mb-0">
+                                <tbody>
+                                    <tr>
+                                        <th scope="row" class="p-1">Id :</th>
+                                        <td class="p-1">{{item.id}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="p-1">Username :</th>
+                                        <td class="p-1">{{item.username}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="p-1">Phone :</th>
+                                        <td class="p-1">{{item.phone}}</td>
+                                    </tr>
+                                    <tr>
+                                       
+                                        <td class="p-1"><a routerLink="/show/{{item.id}}">Show More </a></td>
+                                    </tr>
+                                   
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End col -->
+    <div class="container">
+    <footer>
+        <div class="bg-light py-4">
+            <div class="container text-center">
+              <p class="text-muted mb-0 py-2">© 2021 All rights reserved.</p>
+            </div>
+          </div>
+    </footer>
+</div>
+</div>
+</div>

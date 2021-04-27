@@ -1,0 +1,83 @@
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.27.0/feather.min.js"
+  integrity="sha256-xHkYry2yRjy99N8axsS5UL/xLHghksrFOGKm9HvFZIs="
+  crossorigin="anonymous"
+></script>
+<div class="container">
+  <h1 class="aa">Contact Application</h1>
+  <div class="row justify-content-md-center">
+    <!-- Start col -->
+    <div class="col-lg-6" *ngIf="collect">
+      <div class="card m-b-30">
+        <div class="card-body py-5">
+          <div class="row">
+            <div class="col-lg-3 text-center">
+              <img
+                src="https://bootdey.com/img/Content/avatar/avatar1.png"
+                class="img-fluid mb-3"
+                alt="user"
+              />
+            </div>
+            <div class="col-lg-12">
+              <h4>{{ collect.name }}</h4>
+              <p>{{ collect.email }}</p>
+              <div class="table-responsive">
+                <table class="table table-borderless mb-0">
+                  <tbody>
+                    <tr>
+                      <th scope="row" class="p-1">Id</th>
+                      <td class="p-1">{{ collect.id }}</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="p-1">Username</th>
+                      <td class="p-1">{{ collect.username }}</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="p-1">Address</th>
+                      <td class="p-1">
+                        {{ collect.address["street"] }},{{
+                          collect.address["suite"]
+                        }}, {{ collect.address["city"] }},{{
+                          collect.address["zipcode"]
+                        }}
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="p-1">Geo Graphy</th>
+                      <td class="p-1">
+                        {{ collect.address["geo"]["lat"] }},{{
+                          collect.address["geo"]["lng"]
+                        }}
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="p-1">Phone</th>
+                      <td class="p-1">{{ collect.phone }}</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="p-1">Website</th>
+                      <td class="p-1">{{ collect.website }}</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="p-1">Company name</th>
+                      <td class="p-1">{{ collect.company["name"] }}</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="p-1">catchPhrase</th>
+                      <td class="p-1">{{ collect.company["catchPhrase"] }}</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="p-1">bs</th>
+                      <td class="p-1">{{ collect.company["bs"] }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End col -->
+  </div>
+</div>
